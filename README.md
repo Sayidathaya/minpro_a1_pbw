@@ -349,17 +349,3 @@ Website otomatis menyesuaikan layar:
 3. Buka `index.html` di browser
 
 Tidak memerlukan backend atau server.
-
----
-
-# 📈 Pengembangan Selanjutnya
-
-Project ini dapat dikembangkan dengan:
-
-* Menambahkan fitur dark/light mode
-* Menambahkan animasi scroll (AOS)
-* Menambahkan form contact
-* Deployment ke Netlify / Vercel
-* Optimasi SEO
-
-Jika diperlukan, saya juga bisa buatkan versi README yang lebih formal untuk dikumpulkan sebagai laporan tugas (format akademik lengkap dengan latar belakang, tujuan, dan kesimpulan).
