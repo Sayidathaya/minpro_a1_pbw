@@ -1,5 +1,3 @@
-# 📘 README
-
 # Portfolio – Sayid Rafi A’thaya
 
 ## 📌 Deskripsi Project
@@ -37,6 +35,12 @@ Website ini terdiri dari beberapa bagian utama:
 ---
 
 # TAMPILAN
+
+<img width="1919" height="1014" alt="Image" src="https://github.com/user-attachments/assets/ab3e31b3-215d-4859-b1e3-08c441bcb25c" />
+
+<img width="1891" height="913" alt="Image" src="https://github.com/user-attachments/assets/e818f0c5-4411-43a8-9bb8-a60f59b48c1a" />
+
+<img width="1918" height="910" alt="Image" src="https://github.com/user-attachments/assets/46097304-067f-427a-89e4-353945775e46" />
 
 ---
 
