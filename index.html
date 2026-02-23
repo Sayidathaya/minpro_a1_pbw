@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Portfolio - Sayid Rafi</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-warning" href="#">SR Portfolio</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="#home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#certificates">Certificates</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="home" class="hero-section d-flex align-items-center text-white">
+  <div class="container text-center">
+    <img src="assets/images/profile.jpg" class="rounded-circle mb-4 profile-img shadow-lg" alt="Profile">
+    <h1 class="display-4 fw-bold">{{ name }}</h1>
+    <p class="lead">{{ title }}</p>
+    <button class="btn btn-warning btn-lg mt-3 shadow">Hire Me</button>
+  </div>
+</section>
+
+<!-- ABOUT ME -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-primary">About Me</h2>
+
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="assets/images/hero.jpg" class="img-fluid rounded shadow" alt="About Image">
+      </div>
+
+      <div class="col-md-6">
+        <p class="fs-5">{{ about }}</p>
+
+        <h5 class="mt-4">Skills</h5>
+
+        <div v-for="skill in skills" class="mb-3">
+          <label class="fw-bold">{{ skill.name }}</label>
+          <div class="progress">
+            <div class="progress-bar bg-danger"
+              role="progressbar"
+              :style="{ width: skill.level + '%' }">
+              {{ skill.level }}%
+            </div>
+          </div>
+        </div>
+
+        <h5 class="mt-4">Experience</h5>
+        <ul>
+          <li v-for="exp in experience">{{ exp }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates" class="py-5 bg-dark text-white">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold text-warning">Certificates</h2>
+
+    <div class="row">
+      <div class="col-md-4 mb-4" v-for="cert in certificates">
+        <div class="card h-100 shadow-lg border-0">
+          <img :src="cert.image" class="card-img-top" alt="Certificate">
+          <div class="card-body text-dark">
+            <h5 class="card-title">{{ cert.title }}</h5>
+            <p class="card-text">{{ cert.desc }}</p>
+            <button class="btn btn-primary w-100">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-black text-white text-center py-3">
+  © 2026 {{ name }} | Portfolio
+</footer>
+
+</div>
+
+<!-- Vue JS -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+const { createApp } = Vue
+
+createApp({
+  data() {
+    return {
+      name: "Sayid Rafi A'thaya",
+      title: "Frontend Developer & UI Designer",
+      about: "Saya adalah seorang developer yang berfokus pada pengembangan website modern menggunakan HTML, CSS, Bootstrap, dan Vue JS. Saya menyukai desain yang elegan, responsif, dan berkelas.",
+
+      skills: [
+        { name: "HTML & CSS", level: 95 },
+        { name: "Bootstrap", level: 90 },
+        { name: "Vue JS", level: 85 },
+        { name: "UI/UX Design", level: 80 }
+      ],
+
+      experience: [
+        "Freelance Web Developer (2023 - Present)",
+        "Data Engineer at Tech Company",
+        "Build 20+ Personal Projects"
+      ],
+
+      certificates: [
+        {
+          title: "Secretary & Treasurer",
+          desc: "Certified Secretary & Treasurer",
+          image: "assets/images/cert1.png"
+        },
+        {
+          title: "AI Upskilling Program",
+          desc: "Advanced AI Training",
+          image: "assets/images/cert2.png"
+        },
+        {
+          title: "Moderator & Speaker",
+          desc: "Professional Public Speaker",
+          image: "assets/images/cert3.png"
+        }
+      ]
+    }
+  }
+}).mount('#app')
+</script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
