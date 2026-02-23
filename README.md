@@ -6,6 +6,8 @@ Portfolio adalah website portfolio pribadi yang dibuat untuk menampilkan profil,
 
 Project ini menampilkan integrasi antara struktur HTML, styling CSS, framework Bootstrap 5, serta reactive data binding menggunakan Vue JS.
 
+Website: https://sayidathaya.github.io/minpro_a1_pbw/
+
 ---
 
 # 🛠 Teknologi yang Digunakan
